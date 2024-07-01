@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #1f1f1f; /* Fondo del contenedor más oscuro */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.skill i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.languages-container div {
+    margin-bottom: 5px;
+}
+
+.certifications ul li a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.certifications ul li a:hover {
+    text-decoration: underline;
+}
+
+.presentation {
+    position: relative;
+    height: 50vh; 
+    width: 100%; 
+    background-image: url('Imagenes/dgimixt-985adf13-774b-4bc5-85b8-5b6205067a03%20(1).jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.presentation .content {
+    position: relative;
+    z-index: 1;
+    max-width: 80%; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal del contenido */
+}
+
+.presentation img {
+    width: 150px; /* Ajusta según necesites */
+    height: 200px; /* Ajusta según necesites */
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.presentation h2,
+.presentation p {
+    opacity: 0; /* Ocultos inicialmente */
+}
+
+/* Mantener visibilidad después de la animación */
+.presentation h2.visible,
+.presentation p.visible {
+    opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate__animated {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards; /* Mantener el estado final */
+}
+
+.animate__fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+    animation-name: fadeInRight;
+}
+
+/* Estilos para la sección de contacto */
+.contact {
+    padding: 20px;
+    background-color: #333; /* Fondo gris oscuro */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact .form-group {
+    margin-bottom: 15px;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    color: #aaa; /* Texto gris claro */
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444; /* Borde gris oscuro */
+    border-radius: 4px;
+    background-color: #555; /* Fondo gris medio */
+    color: #fff; /* Texto blanco */
+}
+
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0056b3; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #004494; /* Fondo azul más oscuro al pasar el cursor */
+}
